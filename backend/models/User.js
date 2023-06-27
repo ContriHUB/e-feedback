@@ -11,6 +11,10 @@ const UserSchema = new Schema({
         required: true,
         unique: true,
     },
+    password: {
+        type: String,
+        required: true,
+    },
     date: {
         type: Date,
         default: Date.now,
@@ -18,5 +22,6 @@ const UserSchema = new Schema({
 
 });
 
-
-module.exports = mongoose.model('User',UserSchema);
+const User = mongoose.model('user',UserSchema);
+User.createIndexes();
+module.exports = User;

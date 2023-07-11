@@ -15,17 +15,20 @@ const NoteState = (props)=>{
             cors:{
                 // origin:"https://127.0.0.1:3000",
                 origin: '*',
+                credentials: true,
+                methods: ["GET", "POST"],
                 
             },
             method: 'GET',
             headers: {
-                'Content-Type': 'application/json',
+                'Accept': 'application/json',
                 'auth-token': localStorage.getItem('token')
             }
             
         });
         const json = await response.json()
-        console.log(json)
+        
+        console.log(JSON.stringify(json))
         setnotes(json)
     }
     

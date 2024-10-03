@@ -9,28 +9,26 @@ const NoteState = (props)=>{
     const notesInitial = []
     const [notes,setnotes] = useState(notesInitial)
 
-    const getNotes = async ()=>{
+    const getNotes = async () => {
         const response = await fetch(`${host}/api/notes/fetchallnotes`, {
-            
-            cors:{
-                // origin:"https://127.0.0.1:3000",
-                origin: '*',
-                credentials: true,
-                methods: ["GET", "POST"],
-                
-            },
             method: 'GET',
             headers: {
                 'Accept': 'application/json',
-                'auth-token': localStorage.getItem('token')
-            }
-            
+                'auth-token': localStorage.getItem('token') // Make sure token is valid
+            },
+            credentials: 'include', // Include credentials (e.g., cookies)
+            mode: 'cors'            // Cross-Origin mode
         });
-        const json = await response.json()
-        
-        console.log(JSON.stringify(json))
-        setnotes(json)
-    }
+    
+        if (!response.ok) {
+            console.error('Failed to fetch notes:', response.status);
+            return;
+        }
+    
+        const json = await response.json();
+        console.log(JSON.stringify(json));
+        setnotes(json);  // Assuming setNotes is a state setter function
+    };
     
     const addNote = async (title,description,tag)=>{
         

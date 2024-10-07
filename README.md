@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# NoteSphere
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**NoteSphere** is a feedback collection platform designed to let users submit and manage feedback in the form of notes. It provides an intuitive, user-friendly interface for creating, editing, and managing feedback about projects or activities, making it an ideal tool for gathering valuable insights. Built with React, Node.js, and MongoDB, the application is responsive and dynamic, offering a smooth user experience with modern styling powered by Tailwind CSS.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Installation](#installation)
+- [Usage](#usage)
+- [API Endpoints](#api-endpoints)
+- [Contributing](#contributing)
+- [License](#license)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Submit Feedback as Notes**: Users can submit feedback in the form of notes.
+- **Edit Feedback**: Modify existing feedback notes.
+- **Delete Feedback**: Remove feedback that is no longer needed.
+- **Profile Management**: Users can manage their profile and update profile pictures.
+- **Responsive UI**: Built using Tailwind CSS for a sleek and responsive design across all devices.
+- **User Authentication**: Secure login and registration with JWT (JSON Web Tokens).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+- **Frontend**: React, Tailwind CSS
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB (with Mongoose ORM)
+- **Authentication**: JWT (JSON Web Token)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+To get NoteSphere running locally, follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Node.js**: Make sure you have [Node.js](https://nodejs.org/en/) installed.
+- **MongoDB**: Install and run MongoDB locally or use a cloud provider.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Setup Instructions
 
-### `npm run eject`
+1. **Clone the repository**:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    ```bash
+    git clone https://github.com/ContriHUB/NoteSphere.git
+    cd NoteSphere
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Install backend dependencies**:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    ```bash
+    cd backend
+    npm install bcryptjs --save
+    npm install
+    ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. **Run the backend server**:
 
-## Learn More
+    ```bash
+    nodemon server.js
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. **Start the frontend server**:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    ```bash
+    cd src
+    npm start
+    ```
 
-### Code Splitting
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Once NoteSphere is up and running:
 
-### Analyzing the Bundle Size
+- **Sign Up/Login**: Register or log in to your account.
+- **Submit Feedback**: Use the interface to submit feedback in the form of notes.
+- **Edit/Delete Feedback**: Edit or delete your feedback notes using the available options.
+- **Profile Management**: Update your profile information, including your profile picture.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## API Endpoints
 
-### Making a Progressive Web App
+- **POST /api/auth/login**: Log in to your account.
+- **POST /api/auth/createuser**: Register a new user.
+- **GET /api/notes/fetchallnotes**: Get all notes for the logged-in user.
+- **POST /api/notes/addnote**: Submit a new feedback note.
+- **PUT /api/notes/updatenote/:id**: Update a specific feedback note.
+- **DELETE /api/notes/deletenote/:id**: Delete a specific feedback note.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contributing
 
-### Advanced Configuration
+Contributions are welcome! Feel free to fork the project, make improvements, and submit a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Fork the project.
+2. Create a new branch for your feature: `git checkout -b feature/new-feature`.
+3. Commit your changes: `git commit -m 'Add new feature'`.
+4. Push to the branch: `git push origin feature/new-feature`.
+5. Open a pull request.
 
-### Deployment
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/ContriHUB/NoteSphere/blob/main/LICENSE) file for more details.

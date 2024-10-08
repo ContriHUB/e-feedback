@@ -1,6 +1,6 @@
 # NoteSphere
 
-**NoteSphere** is a feedback collection platform designed to let users submit and manage feedback in the form of notes. It provides an intuitive, user-friendly interface for creating, editing, and managing feedback about projects or activities, making it an ideal tool for gathering valuable insights. Built with React, Node.js, and MongoDB, the application is responsive and dynamic, offering a smooth user experience with modern styling powered by Tailwind CSS.
+**NoteSphere** is a feedback collection platform designed to let users submit and manage feedback in the form of notes. It provides an intuitive, user-friendly interface for creating, editing, and managing feedback about projects or activities, making it an ideal tool for gathering valuable insights. Built with React, Node.js, and MongoDB, the application is responsive and dynamic, offering a smooth user experience with modern styling powered by Bootstrap.
 
 ## Table of Contents
 

@@ -73,7 +73,7 @@ Once NoteSphere is up and running:
 - **Sign Up/Login**: Register or log in to your account.
 - **Submit Feedback**: Use the interface to submit feedback in the form of notes.
 - **Edit/Delete Feedback**: Edit or delete your feedback notes using the available options.
-- **Profile Management**: Update your profile information, including your profile picture.
+
 
 ## API Endpoints
 

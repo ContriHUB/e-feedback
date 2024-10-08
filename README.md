@@ -17,13 +17,12 @@
 - **Submit Feedback as Notes**: Users can submit feedback in the form of notes.
 - **Edit Feedback**: Modify existing feedback notes.
 - **Delete Feedback**: Remove feedback that is no longer needed.
-- **Profile Management**: Users can manage their profile and update profile pictures.
 - **Responsive UI**: Built using Tailwind CSS for a sleek and responsive design across all devices.
 - **User Authentication**: Secure login and registration with JWT (JSON Web Tokens).
 
 ## Tech Stack
 
-- **Frontend**: React, Tailwind CSS
+- **Frontend**: React, Bootstrap
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB (with Mongoose ORM)
 - **Authentication**: JWT (JSON Web Token)

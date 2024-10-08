@@ -42,15 +42,14 @@ To get NoteSphere running locally, follow these steps:
 
     ```bash
     git clone https://github.com/ContriHUB/NoteSphere.git
-    cd NoteSphere
     ```
 
 2. **Install backend dependencies**:
 
     ```bash
+    npm install
     cd backend
     npm install bcryptjs --save
-    npm install
     ```
 
 3. **Run the backend server**:

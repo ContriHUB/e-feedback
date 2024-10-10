@@ -19,9 +19,11 @@ export const Navbar = () => {
 
   <div className="collapse navbar-collapse" id="navbarSupportedContent">
     <ul className="navbar-nav mr-auto">
-      <li className="nav-item">
-        <Link className={`nav-link ${location.pathname==="/"? "active": ""}`} to="/">Home <span className="sr-only">(current)</span></Link>
-      </li>
+    {localStorage.getItem('token') && (
+              <li className="nav-item">
+                <Link className={`nav-link ${location.pathname === "/" ? "active" : ""}`} to="/">Home <span className="sr-only">(current)</span></Link>
+              </li>
+            )}
       <li className="nav-item">
         <Link className={`nav-link ${location.pathname==="/about"? "active": ""}`} to="/about">About</Link>
       </li>

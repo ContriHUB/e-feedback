@@ -16,10 +16,13 @@ export const Navbar = () => {
         <div className="container mx-auto flex justify-between items-center">
           <Link className="text-white text-lg mr-10 " to="/">Navbar</Link>
           <div className="flex space-x-6">
+          
+            {localStorage.getItem('token') && (
             <Link 
               className={`text-white hover:underline `} 
               to="/">Home
             </Link>
+            )}
             <Link 
               className={`text-white hover:underline`} 
               to="/about">About
